@@ -97,7 +97,7 @@ $ cd mongodb-tutorial-database
 
 El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos de docker.
 
-Especificamente la sección en el `docker-compose.yaml` donde esta descrito la red interna personalizada es la siguiente:
+Especificamente la sección en el `docker-compose.yaml` donde esta descrito la red interna personalizada es la siguiente :eye_speech_bubble::
 
 ```yaml
     networks:
