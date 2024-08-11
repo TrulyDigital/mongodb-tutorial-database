@@ -1,13 +1,13 @@
 # Tabla de contenidos
 
-- [Descripción](#descripción)
-- [Arquitectura](#arquitectura)
-- [Requisitios](#requisitos)
-- [Instalación](#instalación)
-- [Conexión](#conexión)
-- [Explicación de Docker Compose](#explicación-de-docker-compose)
-- [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
-- [Explicación de gitignore](#explicación-de-gitignore)
+:arrow_right: [Descripción](#descripción)
+:arrow_right: [Arquitectura](#arquitectura)
+:arrow_right: [Requisitios](#requisitos)
+:arrow_right: [Instalación](#instalación)
+:arrow_right: [Conexión](#conexión)
+:arrow_right: [Explicación de Docker Compose](#explicación-de-docker-compose)
+:arrow_right: [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
+:arrow_right: [Explicación de gitignore](#explicación-de-gitignore)
 
 # Descripción
 
