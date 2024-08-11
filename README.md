@@ -16,6 +16,10 @@
 
 :black_small_square: [Explicación de gitignore](#explicación-de-gitignore)
 
+
+
+
+
 # Descripción
 
 Este proyecto permite instalar una base de datos MongoDB en el sistema local, utilizando Docker.
@@ -45,5 +49,16 @@ Conectarse a la base de datos desde un cliente con interfaz gráfica.
 :heavy_check_mark: **Objetivo**:
 
 Consultas básicas en la base de datos.
+
+
+
+
+
+
+# Requisitos
+
+Para la implementación e instalación de la base de datos MongoDB con docker, debe estar instalado y configurado en el sistema local el siguiete software:
+
+:black_small_sware: Visual Studio - [vscode](https://code.visualstudio.com/). 
 
 
