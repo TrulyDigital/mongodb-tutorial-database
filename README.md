@@ -59,6 +59,7 @@ Consultas básicas en la base de datos.
 
 Para la implementación e instalación de la base de datos MongoDB con docker, debe estar instalado y configurado en el sistema local el siguiete software:
 
-:black_small_square: Visual Studio - [vscode](https://code.visualstudio.com/). 
+:black_small_square: Visual Studio Code - [vscode](https://code.visualstudio.com/). 
+:black_small_square: Docker - [docker](https://www.docker.com/)
 
 
