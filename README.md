@@ -79,6 +79,10 @@ Adicional, algún cliente de administación de base de datos para MongoDB con in
 
 # Instalación
 
+No olvidar :bangbang:
+
+Antes de realizar los pasos de instalación, asegurarse que ya se esta ejecutando Docker en su sistema local.
+
 En el sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
 
 ```bash
@@ -91,7 +95,9 @@ Ingresar al repositorio desde la consola.
 $ cd mongodb-tutorial-database
 ```
 
-El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces para que funcione la instalación, lo **primero** que se debe hacer es crear esta red, especificamente esta es la parte donde se configura la red en el `docker-compose.yaml`.
+El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces, para la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red con los comandos de docker.
+
+Especificamente la sección en el `docker-compose.yaml` donde esta descrito la red interna personalizada es la siguiente:
 
 ```yaml
     networks:
@@ -101,6 +107,14 @@ networks:
   development-net:
     external: true
 ```
+
+Crear la red interna personalizada.
+
+```bash
+$ docker network create development-net
+```
+
+
 
 
 
