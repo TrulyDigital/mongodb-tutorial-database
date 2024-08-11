@@ -81,9 +81,9 @@ Adicional, algún cliente de administación de base de datos para MongoDB con in
 
 :warning: **No olvidar**
 
-Antes de realizar la instalación, asegurarse que ya se esta ejecutando Docker en su sistema local.
+Antes de realizar la instalación, asegurarse que ya se esta ejecutando Docker.
 
-Seguidamente en su sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
+Seguidamente en el sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
 
 ```bash
 $ git clone https://github.com/TrulyDigital/mongodb-tutorial-database.git 
@@ -95,7 +95,7 @@ Ingresar al repositorio desde la consola.
 $ cd mongodb-tutorial-database
 ```
 
-El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces, para la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red con los comandos de docker.
+El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos de docker.
 
 Especificamente la sección en el `docker-compose.yaml` donde esta descrito la red interna personalizada es la siguiente:
 
@@ -112,6 +112,25 @@ Crear la red interna personalizada.
 
 ```bash
 $ docker network create development-net
+```
+
+Ejecutar el archivo de configuración `docker-compose.yaml`.
+
+```bash
+$ docker-compose up -d
+```
+
+:exclamation: **Importante**
+
+Este proceso puede toma unos minutos dependienso las capacidades de la computadora local y de la conexión a internet, el proceso mas demorado es descargar la imágen docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/), pero todo esto sucede automáticamente.
+
+Al final del proceso, si la red interna personalizada fue creada correctamente y se descargo la imágen docker de MongoDB, en la consola se deben ver al final los siguientes mensajes.
+
+```bash
+ Container mongodb-tutorial-database  Creating
+ Container mongodb-tutorial-database  Created
+ Container mongodb-tutorial-database  Starting
+ Container mongodb-tutorial-database  Started
 ```
 
 
