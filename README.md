@@ -11,13 +11,13 @@
 
 # Descripción
 
-Este proyecto te permite instalar una base de datos MongoDB en tu sistema local, utilizando Docker.
+Este proyecto permite instalar una base de datos MongoDB en el sistema local, utilizando Docker.
 
-Que aprenderás en este proyecto ?
+Los temas principales contemplados en la documentacion del proyecto son:
 
 :heavy_check_mark: **Objetivo**:
 
-Instalar de manera rápida una base de datos MongoDB en tu sistema local para propósitos de desarrollo y pruebas, con una configuración muy cercana a una instalación real en un ambiente de producción.
+Instalar de manera rápida una base de datos MongoDB en el sistema local para propósitos de desarrollo y pruebas, con una configuración muy cercana a una instalación real en un ambiente de producción.
 
 :heavy_check_mark: **Objetivo**:
 
@@ -30,5 +30,13 @@ Cargar datos al inicio de la base de datos automatizando el proceso con scripts 
 :heavy_check_mark: **Objetivo**:
 
 Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
+
+:heavy_check_mark: **Objetivo**:
+
+Conexión a la base de datos desde un cliente con interfaz gráfica 
+
+:heavy_check_mark: **Objetivo**:
+
+Consultas básicas en la base de datos.
 
 
