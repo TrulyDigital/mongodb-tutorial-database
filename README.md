@@ -139,7 +139,9 @@ La ejecución del contenedor se puede verificar con el siguiente comando, y el c
 $ docker ps
 ```
 
-:white_check_mark: **Voilà**, ya tienes instalada una base de datos de MongoDB lista para pruebas de desarrollo.
+:white_check_mark: **Voilà**
+
+Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarrollo.
 
 
 
