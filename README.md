@@ -122,7 +122,7 @@ $ docker-compose up -d
 
 :exclamation: **Importante**
 
-Este proceso puede toma unos minutos dependienso las capacidades de la computadora local y de la conexión a internet, el proceso mas demorado es descargar la imágen docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/), pero todo esto sucede automáticamente.
+Este proceso puede toma unos minutos dependiendo las capacidades de la computadora local y de la conexión a internet, el proceso mas demorado es descargar la imágen docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/), todo esto sucede automáticamente.
 
 Al final del proceso, si la red interna personalizada fue creada correctamente y se descargo la imágen docker de MongoDB, en la consola se deben ver al final los siguientes mensajes.
 
@@ -132,6 +132,14 @@ Al final del proceso, si la red interna personalizada fue creada correctamente y
  Container mongodb-tutorial-database  Starting
  Container mongodb-tutorial-database  Started
 ```
+
+La ejecución del contenedor se puede verificar con el siguiente comando, y el contenedor aparece con el nombre `mongodb-tutorial-database`.
+
+```bash
+$ docker ps
+```
+
+:white_check_mark: **Voilà**, ya tienes instalada una base de datos de MongoDB lista para pruebas de desarrollo.
 
 
 
