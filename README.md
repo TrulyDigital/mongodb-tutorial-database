@@ -11,16 +11,24 @@
 
 # Descripción
 
-Este proyecto te permite instalar una base de datos __MongoDB__ en tu sistema local, utilizando Docker.
+Este proyecto te permite instalar una base de datos **MongoDB** en tu sistema local, utilizando Docker.
 
-Los objetivos principales de este proyecto son:
+Que aprenderás en este proyecto ?
 
-:purple_circle: Instalar de manera rápida una base de datos __MongoDB__ en tu sistema local para propósitos de desarrollo y pruebas.
+:purple_circle: **Objetivo**
 
-:purple_circle: Gestión básica de Usuarios y Roles en __MongoDB__
+Instalar de manera rápida una base de datos **MongoDB** en tu sistema local para propósitos de desarrollo y pruebas.
 
-:purple_circle: Cargar datos al inicio de la base de datos automatizando el proceso con scripts (JavaScript).
+:purple_circle: **Objetivo**
 
-:purple_circle: Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
+Gestión básica de Usuarios y Roles en **MongoDB**
+
+:purple_circle: 
+
+Cargar datos al inicio de la base de datos automatizando el proceso con scripts (JavaScript).
+
+:purple_circle: **Objetivo**
+
+Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
 
 
