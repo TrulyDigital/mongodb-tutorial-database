@@ -57,18 +57,18 @@ Consultas básicas en la base de datos.
 
 # Requisitos
 
-Para la implementación e instalación de la base de datos MongoDB con docker, debe estar instalado y configurado en el sistema local el siguiete software:
+Para la implementación e instalación de la base de datos MongoDB con docker, debe estar instalado y configurado en el sistema local el siguiete software.
+
+Adicional, algún cliente de administación de base de datos para MongoDB con interfaz gráfica, se listan los más comúnes, en este proyecto se utiliza `Studio 3T` en su versión gratuita.
 
 :black_small_square: Visual Studio Code - [vscode](https://code.visualstudio.com/)
 
 :black_small_square: Docker - [docker](https://www.docker.com/)
 
-Y algún cliente de administación de base de datos para MongoDB con interfaz gráfica, se listan los más comúnes, en este proyecto se utiliza `Studio 3T` en su versión gratuita.
+:black_small_square: Cliente Sturio 3T - [Studio 3T](https://studio3t.com/es/)
 
-:black_small_square: Sturio 3T - [Studio 3T](https://studio3t.com/es/)
+:black_small_square: Cliente Robo 3T - [Robo 3T](https://robomongo.org/)
 
-:black_small_square: Robo 3T - [Robo 3T](https://robomongo.org/)
-
-:black_small_square: MongoDB Compass - [MongoDB Compass](https://www.mongodb.com/products/tools/compass)
+:black_small_square: Cliente MongoDB Compass - [MongoDB Compass](https://www.mongodb.com/products/tools/compass)
 
 
