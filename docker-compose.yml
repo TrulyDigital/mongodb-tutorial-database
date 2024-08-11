@@ -1,0 +1,34 @@
+services:
+  mongodb:
+    image: 
+      mongo:latest
+    container_name: 
+      mongodb-tutorial-database
+    restart: 
+      always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1g
+    command:
+      - --storageEngine
+      - wiredTiger
+      - --auth
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=aGji97xfTv
+      - MONGO_INITDB_ROOT_PASSWORD=4mSg4EFaNv
+      - MONGO_INITDB_DATABASE=admin
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./volumes:/data/db
+      - ./init-scripts/A_users.js:/docker-entrypoint-initdb.d/A_users.js:ro
+      - ./init-scripts/B_db_default.js:/docker-entrypoint-initdb.d/B_db_default.js:ro
+      - ./init-scripts/C_db_cars.js:/docker-entrypoint-initdb.d/C_db_cars.js:ro
+    networks:
+      - awesome-lab-net
+
+networks:
+  awesome-lab-net:
+    external: true
