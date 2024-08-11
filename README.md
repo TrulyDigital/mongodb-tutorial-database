@@ -17,7 +17,7 @@ Que aprenderás en este proyecto ?
 
 :heavy_check_mark: **Objetivo**:
 
-Instalar de manera rápida una base de datos **MongoDB** en tu sistema local para propósitos de desarrollo y pruebas.
+Instalar de manera rápida una base de datos MongoDB en tu sistema local para propósitos de desarrollo y pruebas, con una configuración muy cercana a una instalación real en un ambiente de producción.
 
 :heavy_check_mark: **Objetivo**:
 
