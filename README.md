@@ -1,20 +1,20 @@
 # Tabla de contenidos
 
-:arrow_right: [Descripción](#descripción)
+:black_small_square: [Descripción](#descripción)
 
-:arrow_right: [Arquitectura](#arquitectura)
+:black_small_square: [Arquitectura](#arquitectura)
 
-:arrow_right: [Requisitios](#requisitos)
+:black_small_square: [Requisitios](#requisitos)
 
-:arrow_right: [Instalación](#instalación)
+:black_small_square: [Instalación](#instalación)
 
-:arrow_right: [Conexión](#conexión)
+:black_small_square: [Conexión](#conexión)
 
-:arrow_right: [Explicación de Docker Compose](#explicación-de-docker-compose)
+:black_small_square: [Explicación de Docker Compose](#explicación-de-docker-compose)
 
-:arrow_right: [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
+:black_small_square: [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
 
-:arrow_right: [Explicación de gitignore](#explicación-de-gitignore)
+:black_small_square: [Explicación de gitignore](#explicación-de-gitignore)
 
 # Descripción
 
@@ -40,7 +40,7 @@ Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
 
 :heavy_check_mark: **Objetivo**:
 
-Conexión a la base de datos desde un cliente con interfaz gráfica 
+Conectarse a la base de datos desde un cliente con interfaz gráfica.
 
 :heavy_check_mark: **Objetivo**:
 
