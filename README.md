@@ -15,19 +15,19 @@ Este proyecto te permite instalar una base de datos __MongoDB__ en tu sistema lo
 
 Los objetivos principales de este proyecto son:
 
-:arrow_right: 
+:purple_circle:
 
 Instalar de manera rápida una base de datos __MongoDB__ en tu sistema local para propósitos de desarrollo y pruebas.
 
-:arrow_right:
+:purple_circle:
 
 Gestión básica de Usuarios y Roles en __MongoDB__
 
-:arrow_right:
+:purple_circle:
 
 Cargar datos al inicio de la base de datos automatizando el proceso con scripts (JavaScript).
 
-:arrow_right:
+:purple_circle:
 
 Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
 
