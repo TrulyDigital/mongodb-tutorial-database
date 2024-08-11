@@ -65,10 +65,42 @@ Adicional, algún cliente de administación de base de datos para MongoDB con in
 
 :black_small_square: Docker - [docker](https://www.docker.com/)
 
-:black_small_square: Cliente Sturio 3T - [Studio 3T](https://studio3t.com/es/)
+:black_small_square: Git- [git](https://git-scm.com/)
+
+:black_small_square: Cliente Studio 3T - [Studio 3T](https://studio3t.com/es/)
 
 :black_small_square: Cliente Robo 3T - [Robo 3T](https://robomongo.org/)
 
 :black_small_square: Cliente MongoDB Compass - [MongoDB Compass](https://www.mongodb.com/products/tools/compass)
+
+
+
+
+
+# Instalación
+
+En el sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
+
+```bash
+$ git clone https://github.com/TrulyDigital/mongodb-tutorial-database.git 
+```
+
+Ingresar al repositorio desde la consola.
+
+```bash
+$ cd mongodb-tutorial-database
+```
+
+El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces para que funcione la instalación, lo **primero** que se debe hacer es crear esta red, especificamente esta es la parte donde se configura la red en el `docker-compose.yaml`.
+
+```yaml
+    networks:
+      - development-net
+
+networks:
+  development-net:
+    external: true
+```
+
 
 

@@ -27,8 +27,8 @@ services:
       - ./init-scripts/B_db_default.js:/docker-entrypoint-initdb.d/B_db_default.js:ro
       - ./init-scripts/C_db_cars.js:/docker-entrypoint-initdb.d/C_db_cars.js:ro
     networks:
-      - awesome-lab-net
+      - development-net
 
 networks:
-  awesome-lab-net:
+  development-net:
     external: true
