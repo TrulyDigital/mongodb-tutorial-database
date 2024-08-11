@@ -79,11 +79,11 @@ Adicional, algún cliente de administación de base de datos para MongoDB con in
 
 # Instalación
 
-No olvidar :bangbang:
+:warning: **No olvidar**
 
-Antes de realizar los pasos de instalación, asegurarse que ya se esta ejecutando Docker en su sistema local.
+Antes de realizar la instalación, asegurarse que ya se esta ejecutando Docker en su sistema local.
 
-En el sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
+Seguidamente en su sistema local (su computadora), desde la consola o terminal, ubicarse en algún directorio y descargar el repositorio.
 
 ```bash
 $ git clone https://github.com/TrulyDigital/mongodb-tutorial-database.git 
