@@ -178,6 +178,25 @@ networks:
 
 Solamente eliminar la líena `external: true`.
 
+:loudspeaker: Listar las redes existentes en Docker
+
+```bash
+$ docker network list
+```
+
+:loudspeaker: Eliminar una red en Docker
+
+```bash
+$ docker network rm [NOMBRE_DE_LA_RED]
+```
+
+Ejemplo
+
+```bash
+$ docker network rm development-net
+```
+
+
 
 
 
