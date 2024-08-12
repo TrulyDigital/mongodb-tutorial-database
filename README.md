@@ -1,6 +1,3 @@
-* ├  ─  └  y  │  ──  *
-
-
 # Tabla de contenidos
 
 1. [Descripción](#descripción)
@@ -236,6 +233,12 @@ Por ese motivo la casilla `Authentication DB` se debe ingresar la palabra `admin
 
 <p align="center">
   <img src="images/studio_3t_img9.png" width="500" alt="Cliente Studio 3T, opción Connection Manager." />
+</p>
+
+:wrench: Nos conectamos a la nueva configuración y si todo sale bien, ya esta todo listo para empezar a realizar consultas en la base de datos. La conexión debe verse asi:
+
+<p align="center">
+  <img src="images/studio_3t_img10.png" width="500" alt="Cliente Studio 3T, opción Connection Manager." />
 </p>
 
 
