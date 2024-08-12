@@ -8,6 +8,8 @@
 
 :black_small_square: [Instalación](#instalación)
 
+:black_small_square: [Notas de Instalación](#notas-de-instalación)
+
 :black_small_square: [Conexión](#conexión)
 
 :black_small_square: [Explicación de Docker Compose](#explicación-de-docker-compose)
@@ -59,13 +61,13 @@ Consultas básicas en la base de datos.
 
 Para la implementación e instalación de la base de datos MongoDB con docker, debe estar instalado y configurado en el sistema local el siguiete software.
 
-Adicional, algún cliente de administación de base de datos para MongoDB con interfaz gráfica, se listan los más comúnes, en este proyecto se utiliza `Studio 3T` en su versión gratuita.
-
 :black_small_square: Visual Studio Code - [vscode](https://code.visualstudio.com/)
 
 :black_small_square: Docker - [docker](https://www.docker.com/)
 
 :black_small_square: Git- [git](https://git-scm.com/)
+
+Adicional, algún cliente de administación de base de datos para MongoDB con interfaz gráfica, se listan los más comúnes, en este proyecto se utiliza `Studio 3T` en su versión gratuita.
 
 :black_small_square: Cliente Studio 3T - [Studio 3T](https://studio3t.com/es/)
 
@@ -142,6 +144,42 @@ $ docker ps
 :white_check_mark: **Voilà**
 
 Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarrollo.
+
+
+
+
+
+# Notas de Instalación
+
+:loudspeaker: Red interna de Docker personalizada
+
+La configuración de la red en el archivo `docker-compose.yaml` esta intencionalmente definida de esta manera, pensando en las mejores prácticas de implementación y en las arquitecturas de software para el despliegue, cuando en un futuro esta base de datos se instale en producción, es mejor controlar directamente la red de Docker a la que pertenece la base de datos de MongoDB y no dejar que Docker gestione esto por nosotros. 
+
+Sin embargo, si se desea que docker sea el que gestione directamente la creación y eliminación de la red, se debe actualizar la siguiente sección del archivo `docker-compose.yaml`, de esto:
+
+```yaml
+    networks:
+      - development-net
+
+networks:
+  development-net:
+    external: true
+```
+
+A esto:
+
+```yaml
+    networks:
+      - development-net
+
+networks:
+  development-net:
+```
+
+Solamente eliminar la líena `external: true`.
+
+
+
 
 
 
