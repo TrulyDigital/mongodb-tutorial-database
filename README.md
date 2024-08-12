@@ -1,3 +1,6 @@
+* ├  ─  └  y  │  ──  *
+
+
 # Tabla de contenidos
 
 :black_small_square: [Descripción](#descripción)
@@ -46,7 +49,7 @@ Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
 
 :heavy_check_mark: **Objetivo**:
 
-Conectarse a la base de datos desde un cliente con interfaz gráfica.
+Conectarse a la base de datos desde un cliente de administación con interfaz gráfica.
 
 :heavy_check_mark: **Objetivo**:
 
@@ -95,6 +98,28 @@ Ingresar al repositorio desde la consola.
 
 ```bash
 $ cd mongodb-tutorial-database
+```
+
+Abrir el proyecto en el editor de texto de preferencia (aca utilizamos `vscode`).
+
+```bash
+$ code .
+```
+
+La estructura del proyecto es la siguiente:
+
+```bash
+mongodb-tutorial-database/
+├── init-scripts/
+│   ├── A_users.js
+│   ├── B_db_default.js
+│   └── C_db_cars.js
+│
+├── volumes/
+│   └── vacio por el momento
+├── .gitignore
+├── docker-compose.yml
+└── README.md
 ```
 
 :warning: **Importante**
