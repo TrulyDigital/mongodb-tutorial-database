@@ -182,9 +182,73 @@ Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarroll
 
 # Conexión
 
+Al abrir el cliente administrador de base de datos para MongoDB (`Studio 3T`), seleccionar la opción `Connect`.
+
 <p align="center">
-  <img src="images/studio_3t_img1.png" width="500" alt="Cliente Studio 3T, opción connect." />
+  <img src="images/studio_3t_img1.png" width="400" alt="Cliente Studio 3T, opción connect." />
 </p>
+
+Selecciona `New connection`
+
+<p align="center">
+  <img src="images/studio_3t_img2.png" width="400" alt="Cliente Studio 3T, opción New connection." />
+</p>
+
+Establecer el nombre de la conexión
+
+<p align="center">
+  <img src="images/studio_3t_img0.png" width="400" alt="Cliente Studio 3T, opción Connection name." />
+</p>
+
+Seleccionar la opción de configuración manual y dar click en `Next`
+
+<p align="center">
+  <img src="images/studio_3t_img3.png" width="400" alt="Cliente Studio 3T, opción Manually configure." />
+</p>
+
+En la pestaña `Server`, verifica o establece la siguiente configuración:
+
+<p align="center">
+  <img src="images/studio_3t_img4.png" width="400" alt="Cliente Studio 3T, opción Server." />
+</p>
+
+En la pestaña `Authentication` debes ingresar el usuario y contraseña que se definio en el archivo `docker-compose.yaml`.
+
+:exclamation: **Usuario administrador**
+
+En el archivo `docker-compose.yaml` se establecio el usuario y contraseña del usuario administrador, este usuario tiene control total sobre la base de datos, y puede crear otrs usuarios, eliminar usuarios, crear base de datos, eliminar base de datos, insertar documentos en cualquier colección de cualquier base de datos y muchas tareas adicionales.
+
+Es por eso que en la casilla `Authentication DB` se debe ingresar la palabra `admin`, haciendo referencia a que los datos que estamos diligenciando son del usuario administrador de MongoDB.
+
+<p align="center">
+  <img src="images/studio_3t_img5.png" width="400" alt="Cliente Studio 3T, opción Authentication." />
+</p>
+
+En la pestaña `SSL` verificar que **NO** este seleccionada la casilla `Use SSL protocol to connect`. Para nuestra prueba de concepto en el sistema local, no necesitamos esta opción.
+
+<p align="center">
+  <img src="images/studio_3t_img6.png" width="400" alt="Cliente Studio 3T, opción SSL." />
+</p>
+
+De forma similar, en la pestaña `SSH` verifique que **NO** este seleccionada la casilla `User SSH tunnel to connect`.
+
+<p align="center">
+  <img src="images/studio_3t_img7.png" width="400" alt="Cliente Studio 3T, opción SSL." />
+</p>
+
+En la parte inferior de toda la configuración siempre estará disponible el botón `Test Connection` para verificar la configuración de autenticación.
+
+<p align="center">
+  <img src="images/studio_3t_img8.png" width="400" alt="Cliente Studio 3T, opción Test Connection." />
+</p>
+
+Guardamos las configuraciones con el botón `OK` y con `Save`. Y les debe aparecer la nueva conexión.
+
+<p align="center">
+  <img src="images/studio_3t_img9.png" width="400" alt="Cliente Studio 3T, opción Connection Manager." />
+</p>
+
+
 
 
 
