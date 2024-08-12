@@ -110,13 +110,14 @@ La estructura del proyecto es la siguiente:
 
 ```bash
 mongodb-tutorial-database/
+│
 ├── init-scripts/
 │   ├── A_users.js
 │   ├── B_db_default.js
 │   └── C_db_cars.js
 │
 ├── volumes/
-│   └── vacio por el momento
+│   └── vacio por el momento...
 │
 ├── .gitignore
 ├── docker-compose.yml
