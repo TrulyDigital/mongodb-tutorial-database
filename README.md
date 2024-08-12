@@ -183,7 +183,7 @@ Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarroll
 
 # Notas de Instalación
 
-:loudspeaker: **Detener la ejecución de la base de datos**
+### **Detener la ejecución de la base de datos**
 
 Con el siguiente comando, Docker detiene la ejecución de la base de datos MongoDB y elimina el contenedor. Aun asi, todas las configuraciones nuevas realizadas (creación de usuarios o creación de bases de datos) y los datos nuevos que se hayan insertado, por ejemplo a través de nuestro cliente `Studio 3T`, se persisten porque en la configuración del archivo `docker-compose.yaml` hemos definido un volumen externo mapeado a nuestro sistema local y **NO** al contenedor.
 
@@ -191,7 +191,11 @@ Con el siguiente comando, Docker detiene la ejecución de la base de datos Mongo
 $ docker-compose down
 ```
 
-:loudspeaker: **Red interna de Docker personalizada**
+:bulb: **Observación**
+
+De manera predeterminada `docker-compose` gestiona la creación y elimincación de redes internas a las que se conectan los contenedores, a menos que en el archivo `docker-compose.yaml` este específico que en la creación del contenedor se conectará a una red externa o ya existente, como nuestro caso.
+
+### **Red interna de Docker personalizada**
 
 La configuración de la red en el archivo `docker-compose.yaml` esta intencionalmente definida de esta manera, pensando en las mejores prácticas de implementación y en las arquitecturas de software para el despliegue, cuando en un futuro esta base de datos se instale en producción, es mejor controlar directamente la red de Docker a la que pertenece la base de datos de MongoDB y no permitir que Docker gestione esto por nosotros. 
 
@@ -218,13 +222,13 @@ networks:
 
 Solamente eliminar la líena `external: true`.
 
-:loudspeaker: **Listar las redes existentes en Docker**
+### **Listar las redes existentes en Docker**
 
 ```bash
 $ docker network list
 ```
 
-:loudspeaker: **Eliminar una red en Docker**
+### **Eliminar una red en Docker**
 
 ```bash
 $ docker network rm [NOMBRE_DE_LA_RED]
