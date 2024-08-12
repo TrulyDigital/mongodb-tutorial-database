@@ -27,7 +27,7 @@
 
 # Descripción
 
-Este proyecto permite instalar una base de datos MongoDB en el sistema local utilizando Docker. De manera automática en el proceso de instalación, se ejecutan unos scripts de inicialización que configuran un par de usuarios y sus roles, y tambien cargan algunos datos de prueba para realizar consultas, a lo largo de la documentación se pueden ir entendiendo estos detalles.
+Este proyecto permite instalar una base de datos MongoDB en el sistema local utilizando Docker. De manera automática, se ejecutan unos scripts de inicialización que configuran un par de usuarios y sus roles, y tambien cargan algunos datos de prueba para realizar consultas, a lo largo de la documentación se pueden ir entendiendo estos detalles.
 
 Todo el proceso de instalación se configura a través del archivo `docker-compose.yaml` para la automatización de las configuraciones.
 
@@ -172,7 +172,7 @@ La ejecución del contenedor se puede verificar con el siguiente comando, y el c
 $ docker ps
 ```
 
-:white_check_mark: **Voilà**
+### :white_check_mark: **Voilà**
 
 Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarrollo.
 

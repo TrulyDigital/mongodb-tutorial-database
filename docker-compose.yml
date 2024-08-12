@@ -16,8 +16,8 @@ services:
       - wiredTiger
       - --auth
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=aGji97xfTv
-      - MONGO_INITDB_ROOT_PASSWORD=4mSg4EFaNv
+      - MONGO_INITDB_ROOT_USERNAME=mongo
+      - MONGO_INITDB_ROOT_PASSWORD=mongo123
       - MONGO_INITDB_DATABASE=admin
     ports:
       - "27017:27017"
