@@ -183,7 +183,7 @@ Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarroll
 # Conexión
 
 <p align="center">
-  <img src="images/studio_3t_img1" width="500" alt="Cliente Studio 3T, opción connect." />
+  <img src="images/studio_3t_img1.png" width="500" alt="Cliente Studio 3T, opción connect." />
 </p>
 
 
