@@ -3,23 +3,23 @@
 
 # Tabla de contenidos
 
-:black_small_square: [Descripción](#descripción)
+1. [Descripción](#descripción)
 
-:black_small_square: [Arquitectura](#arquitectura)
+2. [Arquitectura](#arquitectura)
 
-:black_small_square: [Requisitios](#requisitos)
+3. [Requisitios](#requisitos)
 
-:black_small_square: [Instalación](#instalación)
+4. [Instalación](#instalación)
 
-:black_small_square: [Conexión](#conexión)
+5. [Conexión](#conexión)
 
-:black_small_square: [Explicación de Docker Compose](#explicación-de-docker-compose)
+6. [Explicación de Docker Compose](#explicación-de-docker-compose)
 
-:black_small_square: [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
+7. [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
 
-:black_small_square: [Explicación de gitignore](#explicación-de-gitignore)
+8. [Explicación de gitignore](#explicación-de-gitignore)
 
-:black_small_square: [Notas de Instalación](#notas-de-instalación)
+9. [Notas de Instalación](#notas-de-instalación)
 
 
 
@@ -31,31 +31,21 @@ Este proyecto permite instalar una base de datos MongoDB en el sistema local uti
 
 Todo el proceso de instalación se configura a través del archivo `docker-compose.yaml` para la automatización de las configuraciones.
 
-Los temas principales contemplados en la documentacion del proyecto son:
+Los **Objetivos** principales contemplados en la documentacion del proyecto son:
 
-:heavy_check_mark: **Objetivo**:
+:heavy_check_mark: Instalar de manera rápida una base de datos MongoDB en el sistema local para propósitos de desarrollo y pruebas, con una configuración muy cercana a una instalación real en un ambiente de producción.
 
-Instalar de manera rápida una base de datos MongoDB en el sistema local para propósitos de desarrollo y pruebas, con una configuración muy cercana a una instalación real en un ambiente de producción.
+:heavy_check_mark: Gestión básica de Usuarios y Roles en MongoDB
 
-:heavy_check_mark: **Objetivo**:
+:heavy_check_mark: Cargar datos al inicio de la base de datos automatizando el proceso con scripts (JavaScript).
 
-Gestión básica de Usuarios y Roles en MongoDB
+:heavy_check_mark: Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
 
-:heavy_check_mark: **Objetivo**:
+:heavy_check_mark: Conectarse a la base de datos desde un cliente de administación con interfaz gráfica.
 
-Cargar datos al inicio de la base de datos automatizando el proceso con scripts (JavaScript).
+:heavy_check_mark: Consultas básicas en la base de datos.
 
-:heavy_check_mark: **Objetivo**:
-
-Entender las configuraciones aplicadas en el archivo `docker-compose.yaml`.
-
-:heavy_check_mark: **Objetivo**:
-
-Conectarse a la base de datos desde un cliente de administación con interfaz gráfica.
-
-:heavy_check_mark: **Objetivo**:
-
-Consultas básicas en la base de datos.
+:heavy_check_mark: Que puedas replicar facilmente estas configuraciones para tu base de datos propia.
 
 
 
@@ -182,87 +172,67 @@ Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarroll
 
 # Conexión
 
-### :wrench: **Configurar**
-
-Al abrir el cliente administrador de base de datos para MongoDB (`Studio 3T`), seleccionar la opción `Connect`.
+:wrench: Al abrir el cliente administrador de base de datos para MongoDB (`Studio 3T`), seleccionar la opción `Connect`.
 
 <p align="center">
   <img src="images/studio_3t_img1.png" width="500" alt="Cliente Studio 3T, opción connect." />
 </p>
 
-### :wrench: **Configurar**
-
-Selecciona `New connection`.
+:wrench: Selecciona `New connection`.
 
 <p align="center">
   <img src="images/studio_3t_img2.png" width="500" alt="Cliente Studio 3T, opción New connection." />
 </p>
 
-### :wrench: **Configurar**
-
-Establecer el nombre de la conexión.
+:wrench: Establecer el nombre de la conexión.
 
 <p align="center">
   <img src="images/studio_3t_img0.png" width="500" alt="Cliente Studio 3T, opción Connection name." />
 </p>
 
-### :wrench: **Configurar**
-
-Seleccionar la opción de configuración manual y dar click en `Next`.
+:wrench: Seleccionar la opción de configuración manual y dar click en `Next`.
 
 <p align="center">
   <img src="images/studio_3t_img3.png" width="500" alt="Cliente Studio 3T, opción Manually configure." />
 </p>
 
-### :wrench: **Configurar**
-
-En la pestaña `Server`, verifica o establece la siguiente configuración:
+:wrench: En la pestaña `Server`, verifica o establece la siguiente configuración:
 
 <p align="center">
   <img src="images/studio_3t_img4.png" width="500" alt="Cliente Studio 3T, opción Server." />
 </p>
 
-### :wrench: **Configurar**
-
-En la pestaña `Authentication` debes ingresar el usuario y contraseña que se definio en el archivo `docker-compose.yaml`.
+:wrench: En la pestaña `Authentication` debes ingresar el usuario y contraseña que se definio en el archivo `docker-compose.yaml`.
 
 :exclamation: **Usuario administrador**
 
-En el archivo `docker-compose.yaml` se establecio el usuario y contraseña del usuario administrador, este usuario tiene control total sobre la base de datos, y puede crear otrs usuarios, eliminar usuarios, crear base de datos, eliminar base de datos, insertar documentos en cualquier colección de cualquier base de datos y muchas tareas adicionales.
+En el archivo `docker-compose.yaml` se establecio el usuario y contraseña del usuario administrador, este usuario tiene control total sobre la base de datos, y puede crear otros usuarios, eliminar usuarios, crear base de datos, eliminar base de datos, insertar documentos en cualquier colección de cualquier base de datos y muchas tareas adicionales.
 
-Por ese motivo la casilla `Authentication DB` se debe ingresar la palabra `admin`, haciendo referencia a que los datos que estamos diligenciando son del usuario administrador de MongoDB.
+Por ese motivo la casilla `Authentication DB` se debe ingresar la palabra `admin`, haciendo referencia a que la información que estamos diligenciando es del usuario administrador de MongoDB.
 
 <p align="center">
   <img src="images/studio_3t_img5.png" width="500" alt="Cliente Studio 3T, opción Authentication." />
 </p>
 
-### :wrench: **Configurar**
-
-En la pestaña `SSL` verificar que **NO** este seleccionada la casilla `Use SSL protocol to connect`. Para nuestra prueba de concepto en el sistema local, no necesitamos esta opción.
+:wrench: En la pestaña `SSL` verificar que **NO** este seleccionada la casilla `Use SSL protocol to connect`. Para nuestra prueba de concepto en el sistema local, no necesitamos esta opción.
 
 <p align="center">
   <img src="images/studio_3t_img6.png" width="500" alt="Cliente Studio 3T, opción SSL." />
 </p>
 
-### :wrench: **Configurar**
-
-De forma similar, en la pestaña `SSH` verifique que **NO** este seleccionada la casilla `User SSH tunnel to connect`.
+:wrench: De forma similar, en la pestaña `SSH` verifique que **NO** este seleccionada la casilla `User SSH tunnel to connect`.
 
 <p align="center">
   <img src="images/studio_3t_img7.png" width="500" alt="Cliente Studio 3T, opción SSL." />
 </p>
 
-### :wrench: **Configurar**
-
-En la parte inferior de toda la configuración siempre estará disponible el botón `Test Connection` para verificar la configuración de autenticación.
+:wrench: En la parte inferior de toda la configuración siempre estará disponible el botón `Test Connection` para verificar la configuración de autenticación.
 
 <p align="center">
   <img src="images/studio_3t_img8.png" width="500" alt="Cliente Studio 3T, opción Test Connection." />
 </p>
 
-### :wrench: **Configurar**
-
-Guardamos las configuraciones con el botón `OK` y con `Save`. Y les debe aparecer la nueva conexión.
+:wrench: Guardamos las configuraciones con el botón `OK` y con `Save`. Y les debe aparecer la nueva conexión.
 
 <p align="center">
   <img src="images/studio_3t_img9.png" width="500" alt="Cliente Studio 3T, opción Connection Manager." />
