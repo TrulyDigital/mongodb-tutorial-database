@@ -8,8 +8,6 @@
 
 :black_small_square: [Instalación](#instalación)
 
-:black_small_square: [Notas de Instalación](#notas-de-instalación)
-
 :black_small_square: [Conexión](#conexión)
 
 :black_small_square: [Explicación de Docker Compose](#explicación-de-docker-compose)
@@ -17,6 +15,8 @@
 :black_small_square: [Explicación de Scripts de Inicialización](#explicación-de-scripts-de-inicialización)
 
 :black_small_square: [Explicación de gitignore](#explicación-de-gitignore)
+
+:black_small_square: [Notas de Instalación](#notas-de-instalación)
 
 
 
@@ -97,9 +97,11 @@ Ingresar al repositorio desde la consola.
 $ cd mongodb-tutorial-database
 ```
 
-El archivo de configuración e instalación, que se llama `docker-compose.yaml`, tiene creado una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos de docker.
+:warning: **Importante**
 
-Especificamente la sección en el `docker-compose.yaml` donde esta descrito la red interna personalizada es la siguiente :eye_speech_bubble::
+El archivo de configuración e instalación, que se llama `docker-compose.yaml`, hace referencia a una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos de docker.
+
+Especificamente la sección en el `docker-compose.yaml` donde esta definida la red interna personalizada es la siguiente :eye_speech_bubble:.
 
 ```yaml
     networks:
@@ -122,7 +124,7 @@ Ejecutar el archivo de configuración `docker-compose.yaml`.
 $ docker-compose up -d
 ```
 
-:exclamation: **Importante**
+:exclamation: **Observación**
 
 Este proceso puede toma unos minutos dependiendo las capacidades de la computadora local y de la conexión a internet, el proceso mas demorado es descargar la imágen docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/), todo esto sucede automáticamente.
 
@@ -149,11 +151,20 @@ Ya tienes instalada una base de datos de MongoDB lista para pruebas de desarroll
 
 
 
+
 # Notas de Instalación
 
-:loudspeaker: Red interna de Docker personalizada
+:loudspeaker: **Detener la ejecución de la base de datos**
 
-La configuración de la red en el archivo `docker-compose.yaml` esta intencionalmente definida de esta manera, pensando en las mejores prácticas de implementación y en las arquitecturas de software para el despliegue, cuando en un futuro esta base de datos se instale en producción, es mejor controlar directamente la red de Docker a la que pertenece la base de datos de MongoDB y no dejar que Docker gestione esto por nosotros. 
+Con el siguiente comando, Docker detiene la ejecución de la base de datos MongoDB y elimina el contenedor. Aun asi, todas las configuraciones nuevas realizadas (creación de usuarios o creación de bases de datos) y los datos nuevos que se hayan insertado, por ejemplo a través de nuestro cliente `Studio 3T`, se persisten porque en la configuración del archivo `docker-compose.yaml` hemos definido un volumen externo mapeado a nuestro sistema local y **NO** al contenedor.
+
+```bash
+$ docker-compose down
+```
+
+:loudspeaker: **Red interna de Docker personalizada**
+
+La configuración de la red en el archivo `docker-compose.yaml` esta intencionalmente definida de esta manera, pensando en las mejores prácticas de implementación y en las arquitecturas de software para el despliegue, cuando en un futuro esta base de datos se instale en producción, es mejor controlar directamente la red de Docker a la que pertenece la base de datos de MongoDB y no permitir que Docker gestione esto por nosotros. 
 
 Sin embargo, si se desea que docker sea el que gestione directamente la creación y eliminación de la red, se debe actualizar la siguiente sección del archivo `docker-compose.yaml`, de esto:
 
@@ -178,19 +189,19 @@ networks:
 
 Solamente eliminar la líena `external: true`.
 
-:loudspeaker: Listar las redes existentes en Docker
+:loudspeaker: **Listar las redes existentes en Docker**
 
 ```bash
 $ docker network list
 ```
 
-:loudspeaker: Eliminar una red en Docker
+:loudspeaker: **Eliminar una red en Docker**
 
 ```bash
 $ docker network rm [NOMBRE_DE_LA_RED]
 ```
 
-Ejemplo
+Ejemplo:
 
 ```bash
 $ docker network rm development-net
