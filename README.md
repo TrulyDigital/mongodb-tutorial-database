@@ -24,7 +24,7 @@
 
 # Descripción
 
-Este proyecto permite instalar una base de datos MongoDB en el sistema local, utilizando Docker.
+Este proyecto permite instalar una base de datos MongoDB en el sistema local utilizando Docker. De manera automática en el proceso de instalación, se ejecutan unos scripts de inicialización que configuran un par de usuarios y sus roles, y tambien cargan algunos datos de prueba para realizar consultas, a lo largo de la documentación se pueden ir entendiendo estos detalles.
 
 Los temas principales contemplados en la documentacion del proyecto son:
 
@@ -99,7 +99,7 @@ $ cd mongodb-tutorial-database
 
 :warning: **Importante**
 
-El archivo de configuración e instalación, que se llama `docker-compose.yaml`, hace referencia a una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos de docker.
+El archivo de configuración e instalación, que se llama `docker-compose.yaml`, hace referencia a una red interna personalizada para contenedores, entonces, para que la instalación funcione correctamente, lo **primero** que se debe hacer es crear esta red por medio de comandos Docker.
 
 Especificamente la sección en el `docker-compose.yaml` donde esta definida la red interna personalizada es la siguiente :eye_speech_bubble:.
 
@@ -126,9 +126,9 @@ $ docker-compose up -d
 
 :exclamation: **Observación**
 
-Este proceso puede toma unos minutos dependiendo las capacidades de la computadora local y de la conexión a internet, el proceso mas demorado es descargar la imágen docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/), todo esto sucede automáticamente.
+Este proceso puede toma unos minutos dependiendo las capacidades de la computadora local y de la conexión a internet, lo mas demorado es descargar la imágen Docker de MongoDB del repositorio de [dockerhub](https://hub.docker.com/). Todo esto sucede automáticamente.
 
-Al final del proceso, si la red interna personalizada fue creada correctamente y se descargo la imágen docker de MongoDB, en la consola se deben ver al final los siguientes mensajes.
+Al final del proceso, si la red interna personalizada fue creada correctamente y se descargo la imágen Docker de MongoDB, en la consola se deben ver los siguientes mensajes.
 
 ```bash
  Container mongodb-tutorial-database  Creating
